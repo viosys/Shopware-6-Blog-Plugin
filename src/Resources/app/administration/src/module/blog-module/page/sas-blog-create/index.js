@@ -8,7 +8,10 @@ Component.register('sas-blog-create', {
 
     inject: ['repositoryFactory'],
 
-    mixins: [Mixin.getByName('notification')],
+    mixins: [
+        Mixin.getByName('placeholder'),
+        Mixin.getByName('notification')
+    ],
 
     data() {
         return {

@@ -15,7 +15,8 @@
         "detail": {
             "saveBlogEntry": "Eintrag speichern",
             "activeLable": "Artikel aktiv",
-            "contentLable": "Markdown Inhalt",
+            "contentLable": "Inhalt",
+            "contentPlaceholder": "Lorem Ipsum",
             "slugLable": "Slug",
             "titleLable": "Titel"
         }
