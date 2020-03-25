@@ -70,7 +70,7 @@ class BlogController extends StorefrontController
 
     /**
      * @RouteScope(scopes={"storefront"})
-     * @Route("/blog/{slug}", name="sns.frontend.blog.detail", methods={"GET"})
+     * @Route("/blog/{slug}", name="sas.frontend.blog.detail", methods={"GET"})
      * @throws PageNotFoundException
      */
     public function detailAction(Request $request, SalesChannelContext $salesChannelContext, Context $criteriaContext, $slug): Response
@@ -90,7 +90,7 @@ class BlogController extends StorefrontController
         $entry = $results->first();
 
 
-        return $this->renderStorefront('@Storefront/page/blog/detail.html.twig', [
+        return $this->renderStorefront('@Storefront/storefront/page/blog/detail.html.twig', [
             'page' => $page,
             'entry' => $entry
         ]);

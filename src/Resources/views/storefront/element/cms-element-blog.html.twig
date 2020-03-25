@@ -1,0 +1,29 @@
+{% block element_blog %}
+    <div class="cms-element-blog">
+       <div class="row">
+           {% if element.data.blog|length %}
+               {% for entry in element.data.blog %}
+                   <div class="col-12">
+                       <article class="card mt-5">
+                           <a href="{{ path('sas.frontend.blog.detail', { slug: entry.slug }) }}">
+                               <div class="card-body">
+                                   <h2 class="card-title">{{ entry.title }}</h2>
+                                   {{ entry.content|raw }}
+                               </div>
+                           </a>
+                       </article>
+                   </div>
+               {% endfor %}
+           {% else %}
+               <div class="col-12">
+                   <div class="alert alert-primary" role="alert">
+                       {% sw_include '@Storefront/storefront/utilities/alert.html.twig' with {
+                           type:"info",
+                           content:"Currently there're no blog entries available."
+                       } %}
+                   </div>
+               </div>
+           {% endif %}
+       </div>
+    </div>
+{% endblock %}

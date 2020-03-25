@@ -18,7 +18,8 @@
             "contentLable": "Inhalt",
             "contentPlaceholder": "Lorem Ipsum",
             "slugLable": "Slug",
-            "titleLable": "Titel"
+            "titleLable": "Titel",
+            "mediaLable": "Teaser Image"
         }
     }
 }
